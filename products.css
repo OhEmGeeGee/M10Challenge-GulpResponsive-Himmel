@@ -1,0 +1,244 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+  body {
+    background-color: #082B59;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    line-height: 2;
+  }
+  h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+  }
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+  /* make images flexible */
+  img {
+    max-width: 100%;
+  }
+  a {
+    color: #59331d;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  header {
+    border-bottom: 10px solid #d98555;
+  }
+
+
+  /* navbar styling  -
+    THIS is how TABLET VIEWPORT CSS should look*/
+
+  nav ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  nav li {
+    margin: 0 1rem 1rem 1rem;
+    font-size: 1.3rem;
+  }
+
+  .mug {
+    max-height: 15px;
+  }
+
+  .fire {
+    max-height: 20px;
+  }
+
+  .phone {
+    max-height: 20px;
+  }
+  /* max width on the image in pixels 
+  THIS is how TABLET VIEWPORT CSS should look*/ 
+  nav .logo img {
+    max-width: 150px;
+  }
+
+  /* flex basis on the image container, li */
+  nav .logo {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+  }
+  nav a:hover {
+    color: #d98555;
+  }
+
+  /* Start of NEW CONTENT */
+  /* establishes a white background */
+  .main-bkgd {
+    background: #ffffff url(https://assets.codepen.io/6306176/gulp-bean-bkgd.jpg) repeat-x bottom;
+    padding-bottom: 300px;
+  }
+  /* sits inside of the white background, centered */
+  .main {
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  article {
+    flex-basis: 73%;
+    text-align: center; /*centers text*/
+  }
+
+  figure {
+    margin: 10px 0 0 0;
+    flex-basis: 25%;
+    border-radius: 10px;
+    text-align: center; /*centers images*/
+  }
+
+  figure img {
+    border-radius: 10px;
+  }
+
+
+  /* Footer Begins*/ 
+  footer {
+    color: #f2f2f2;
+    text-align: center;
+    border-top: 10px solid #d98555;
+  }
+  footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  footer a {
+    color: #f2f2f2;
+    font-size: 2rem;
+    display: block;
+    margin: 0 1rem 3rem 1rem;
+  }
+  .faceSquare {
+    max-height: 40px;
+  }
+
+  .twitSquare {
+    max-height: 40px;
+    margin-right: 5px;
+  }
+
+  .insSquare {
+    max-height: 40px;
+    margin-right: 5px;
+    
+  }
+
+  /*desktop*/
+  @media only screen and (min-width: 840px){
+
+      nav ul {
+        padding: 0;
+        margin: 0;
+        height: 110px;
+        list-style-type: none;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+      }
+
+      nav .logo img {
+        position: absolute;
+        left: 2;
+        display: flex;
+        justify-content: flex-start;
+        max-width: 150px;
+        margin: 10px;
+      }
+      .main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "product1 product2 product3"
+      }
+
+    
+      article {
+        flex-basis: 73%;
+        text-align: center; /*centers text*/
+      }
+    
+      figure {
+        margin: 10px 0 0 0;
+        flex-basis: 25%;
+        border-radius: 10px;
+        text-align: center; /*centers images*/
+      }
+
+  }
+
+  /*Mobile*/
+  @media only screen and (max-width: 390px){
+    
+    nav ul {
+        text-align: center;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "logo"
+        "fa-mug-sauce" 
+        "fa-fire-flame-curved"
+        "fa-phone";
+      }
+      .fa-mug-saucer {
+        grid-area: fa-mug-saucer;
+      }
+      .mug {
+        max-height: 15px;
+      }
+
+      .fa-fire-flame {
+        grid-area: fa-fire-flame-curved;
+      }
+
+      .fire {
+        max-height: 20px;
+      }
+
+      .fa-phone {
+        grid-area: fa-phone;
+      }
+
+      .phone {
+        max-height: 20px;
+      }
+
+      .logo {
+        grid-area: logo;
+      }
+/* product Section Starts*/
+.main {
+    max-width: /* will this stop the shifting text?*/
+}
+
+/*Footer Section Starts*/
+      .text {
+        display: none;
+      }
+
+}
